@@ -1,0 +1,6 @@
+class IAbstractSkill {
+	getMainSkill() {
+	}
+	getSecondarySkill() {
+	}
+}

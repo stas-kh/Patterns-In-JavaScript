@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head lang="en">
+	<meta charset="=utf-8">
+	<title>Chain of responsibility</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="limitations">
+	Lower limit: <input type="number" class="lower-limit" value="-10"/>
+	Upper limit: <input type="number" class="upper-limit" value="10"/>
+</div>
+
+<div class="container">
+	<div class="box">
+		<h1>Negative</h1>
+		<div class="box-content negative-digits"></div>
+	</div>
+	<div class="box">
+		<h1>Positive</h1>
+		<div class="box-content positive-digits"></div>
+	</div>
+	<div class="box">
+		<h1>Zero (times)</h1>
+		<div class="box-content zero-digit">0</div>
+	</div>
+</div>
+
+<div class="generator">
+	<span>Next digit is: </span>
+	<span class="next-digit"></span>
+</div>
+
+<script src="js/main-compiled.js"></script>
+</body>
+</html>

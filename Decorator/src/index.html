@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angry birds decorator example</title>
+	<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<nav class="left-section">
+	<figure class="photo"></figure>
+	<div class="hgroup">
+		<h1 class="author">Stanislav Khorunzhyi</h1>
+		<h2 class="date">27th of Apr, 2016</h2>
+		<h1 class="title">DECORATOR PATTERN</h1>
+	</div>
+	<div class="social">
+		<div class="soc1"></div>
+		<div class="soc2"></div>
+		<div class="soc3"></div>
+	</div>
+</nav>
+
+<div class="main">
+	<div class="items-container">
+		<h1>Player balance: <span class="player-balance"></span></h1>
+	</div>
+	<div class="items-container">
+		<button class="buy-default-bird">Buy default bird</button>
+	</div>
+	<div class="items-container">
+		<button class="buy-decorated-bird">Buy decorated bird</button>
+		<select class="bird-type">
+			<option value="decorated">Decorated bird</option>
+			<option value="blues">Blues bird</option>
+			<option value="chuck">Chuck bird</option>
+		</select>
+	</div>
+
+	<div class="birds-container"></div>
+</div>
+
+
+<script src="../build/decorator-min.js"></script>
+
+</body>
+</html>

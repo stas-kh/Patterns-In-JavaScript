@@ -1,0 +1,76 @@
+{
+	"CommonFlashVars": {
+		"Host": "http://[RANDOM].dev.bingo.boss-test.net",
+		"Port": "7788",
+		"WebsocketUrl": "ws://10.47.42.59:9090/websocket",
+		"GcName": "",
+		"ClientId": "GS4FlashClient",
+		"Locale": "en_GB",
+		"UserName": "",
+		"AuthenticationKey": "",
+		"StreamId": "",
+		"GameSessionId": ""
+	},
+	"CommunicationFlashVars": {
+		"SecondsKeepAlive": 300,
+		"SecondsFailedReconnect": 60,
+		"SecondsNotifyPlayer": 30,
+		"MillisecondsReconnectAttempts": 1000,
+		"WebSocketPingInterval": 5000,
+		"WebSocketMaxPing": 6,
+		"IsMocked": false
+	},
+	"BingoFlashVars": {
+		"IsLiveStreamEnabled": false,
+		"ResendBingoStatePingInterval": 4,
+		"WaitBingoStateInterval": 180,
+		"NotReceivedCorrectBingoStateMessageDelay": 10,
+		"BalanceUpdatePingInterval": 300,
+		"StandardStateUpdateInterval": 15,
+		"FrequentStateUpdateInterval": 5,
+		"ResendGetRoundInfoInterval": 5,
+		"LobbyMillisecondsRuntimeUpdateInterval": 10000,
+		"AutobuyInterval": 5000,
+		"SilentModeInterval": 10000,
+		"InactivityFatalPingingInterval": 5,
+		"InactivityWarningDuration": 30,
+		"InactivityPingDelay": 60,
+		"AllowPresenceMessages": true,
+		"SendGetRoundInfoDelay": 15,
+		"LiquidScaleMode": true,
+		"EnableSoundChangeAPICall": false,
+        "FullLobbyLink": "http://link-to-portal-from-lobby.com"
+	},
+	"BingoThemeFlashVars": {
+		"ThemeBaseUrl": "./themes/",
+		"MockThemeData": false
+	},
+	"ChatSettings": {
+		"ChatDeploymentUrl": "./chat/"
+	},
+	"MiniGamesSettings": {
+		"MiniGameGfxSize": "480x320",
+		"MiniGameDomain": "[RANDOM].minigame.dev.bingo.boss-test.net:[CLIENT_PORT]/[CLIENT_PATH]/",
+		"MiniGameHost": "http://[RANDOM].dev.bingo.boss-test.net",
+		"MiniGameLoadTimeout": 180000,
+		"ResendGetMiniGamesInterval": 5,
+		"context": "bingo",
+		"MinigameBalanceCacheInterval": 3,
+		"MinigameSecondsKeepAlive": "[SECONDS_KEEP_ALIVE]",
+		"HtmlGameHost": "dev.bingo.boss-test.net",
+		"HtmlGamePort": 9090,
+		"HtmlGameClientId": "GS4FlashClient",
+		"MiniGameClientId": "",
+		"MiniGameTokenEncodeTwice": true,
+		"EnableMiniGameSoundCallback": false
+	},
+	"DefaultLoaderColorThemeFlashVars": {
+		"SplashscreenBkgColor": "0xFFFFFF",
+		"SplashscreenGfxColor": "0x555555",
+		"EmbeddedDialogBkgColor": "0xCB2B80",
+		"EmbeddedDialogOutlineColor": "0x661540",
+		"EmbeddedDialogTextColor": "0xFFFFFF",
+		"EmbeddedDialogWidth": 350,
+		"EmbeddedDialogHeight": 105
+	}
+}

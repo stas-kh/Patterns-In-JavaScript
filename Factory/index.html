@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Factory and Factory method</title>
+	<style>
+		div {
+			width: 100px;
+			height: 150px;
+			padding: 20px;
+			background-color: #2e2e2e;
+			float: left;
+			color: white;
+			margin: 10px;
+		}
+		div > img {
+			display: block;
+			height: 60%;
+			margin: 0 auto;
+			border: 2px solid white;
+			border-radius: 20px;
+			animation: spinPulse ease-out 10s infinite;
+		}
+		div > h1 {
+			text-align: center;
+			font-family: Calibri;
+			font-weight: normal;
+			font-size: 20px;
+		}
+		@keyframes spinPulse {
+			0% { transform: rotate(-10deg); }
+			50% { transform: rotate(10deg); }
+			100% { transform: rotate(-10deg); }
+		}
+	</style>
+</head>
+<body>
+<p>
+	<button>Generate random hero</button>
+</p>
+
+<script src="build/factory-compiled.js"></script>
+</body>
+</html>

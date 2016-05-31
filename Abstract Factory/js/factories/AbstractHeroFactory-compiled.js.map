@@ -1,0 +1,1 @@
+{"version":3,"sources":["AbstractHeroFactory.js"],"names":[],"mappings":";;;;;;IAAM;;;;;;;oCACa;;;oCAGA;;;iCAGH;;;QAPV","file":"AbstractHeroFactory-compiled.js","sourcesContent":["class IHeroFactory {\r\n\tcreateAbilities() {\r\n\t}\r\n\t\r\n\tcreateEquipment() {\r\n\t}\r\n\r\n\tcreateSkills() {\r\n\t}\r\n}"]}

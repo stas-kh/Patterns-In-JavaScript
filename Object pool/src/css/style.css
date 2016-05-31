@@ -1,0 +1,72 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+div {
+	width: 100px;
+	height: 150px;
+	padding: 20px;
+	background-color: #2e2e2e;
+	float: left;
+	color: white;
+	margin: 10px 10px 30px 10px;
+	text-align: center;
+	position: relative;
+}
+
+div > img {
+	display: block;
+	height: 60%;
+	margin: 0 auto;
+	border: 2px solid white;
+	border-radius: 20px;
+	animation: spinPulse ease-out 10s infinite;
+}
+
+div > h1, header > h1 {
+	text-align: center;
+	font-family: Calibri;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+header > h1 {
+	background: #955251;
+	color: white;
+	font-size: 40px;
+	padding: 20px;
+}
+
+button {
+	display: inline-block;
+	margin: 20px;
+}
+
+div > button {
+	position: absolute;
+	top: -17px;
+	right: 3px;
+	margin: 20px 0;
+	background-image: url("http://findicons.com/files/icons/1008/quiet/128/no.png");
+	width: 15px;
+	height: 15px;
+	background-size: cover;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@keyframes spinPulse {
+	0% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}

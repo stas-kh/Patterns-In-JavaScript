@@ -1,0 +1,186 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+html, body {
+	height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.left-section {
+	position: fixed;
+	float: left;
+	width: 350px;
+	min-height: 700px;
+	height: 100%;
+	background: #606c88;
+	background: -webkit-linear-gradient(#606c88 0%, #3f4c6b 100%);
+	background: -moz-linear-gradient(#606c88 0%, #3f4c6b 100%);
+	background: -o-linear-gradient(#606c88 0%, #3f4c6b 100%);
+	background: linear-gradient(#606c88 0%, #3f4c6b 100%);
+}
+
+.left-section .photo {
+	background: url("http://mobi-homepage.com/wp-content/uploads/2015/03/avatar.png");
+	background-position: center;
+	background-size: cover;
+	width: 70%;
+	padding-bottom: 70%;
+	border-radius: 50%;
+	border: 2px solid white;
+	margin: 20px auto;
+}
+
+.left-section hgroup > * {
+	color: white;
+	font-weight: 300;
+	text-align: center;
+}
+
+.left-section .author {
+	font-size: 22px;
+}
+
+.left-section .date {
+	font-size: 12px;
+	margin: 10px 0 50px 0;
+}
+
+.left-section .title {
+	text-align: center;
+	font-size: 50px;
+}
+
+.left-section .social {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.left-section .social > div {
+	width: 85px;
+	height: 85px;
+	display: inline-block;
+	transform: scale(0.6);
+	cursor: pointer;
+	background-size: 100%;
+	transition: 0.5s ease-out;
+}
+
+.left-section .social > div:hover {
+	transform: scale(0.8);
+}
+
+.left-section .social > .soc1 {
+	background-image: url("https://www.rafbf.org/sites/all/themes/rafbf/img/icon-facebook.png");
+}
+
+.left-section .social > .soc2 {
+	background-image: url("http://harrisonmusic.co.uk/wp-content/uploads/2015/01/Youtube_icon.png");
+}
+
+.left-section .social > .soc3 {
+	background-image: url("http://startupfocus.saphana.com/wp-content/uploads/2015/12/twitter-icon.png");
+}
+
+.left-section, .main {
+	font-family: 'Lato', sans-serif;
+	overflow-y: auto;
+}
+
+.main {
+	float: right;
+	width: calc(100% - 350px);
+	min-height: 100%;
+	background-color: #F5F5F5;
+	padding: 50px;
+	position: relative;
+}
+
+pre, code {
+	background: transparent;
+}
+
+pre {
+	display: block;
+	width: 100%;
+	background: white;
+	margin: 20px 0;
+	font-size: 16px;
+}
+
+code {
+	padding: 0 40px !important;
+}
+
+.game-example .hero-image {
+	background: url("https://i.ytimg.com/vi/QYqSZjCRJvg/maxresdefault.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 250px;
+}
+
+.game-example .content {
+	margin: 40px 0;
+}
+
+.game-example .info, .game-example .bonus-time, .game-example .points {
+	float: left;
+}
+
+.game-example h2 {
+	margin-top: 15px;
+}
+
+.game-example .info {
+	margin-right: 5px;
+}
+
+.game-example .container {
+	margin: 5px 0;
+	overflow: hidden;
+}
+
+.bonus-time {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: #E64A19;
+}
+
+.bonus-time.active {
+	background-color: #388E3C;
+}
+
+.extra-points {
+	color: #388E3C;
+	font-size: 12px;
+	margin-left: 10px;
+	font-weight: 600;
+}
+
+.game-example {
+	display: none;
+}
+
+#initialize, #initialize:hover:active {
+	margin-top: 15px;
+	padding: 5px 20px;
+	border: 0;
+	outline: 0;
+	background: #2e2e2e;
+	color: white;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+#initialize:hover {
+	border: 1px solid #2e2e2e;
+	color: #2e2e2e;
+	background: white;
+}

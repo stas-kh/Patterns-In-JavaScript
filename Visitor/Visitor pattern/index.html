@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<nav class="left-section">
+	<figure class="photo"></figure>
+	<hgroup>
+		<h1 class="author">Stanislav Khorunzhyi</h1>
+		<h2 class="date">19th of Feb, 2016</h2>
+		<h1 class="title">VISITOR PATTERN</h1>
+	</hgroup>
+	<div class="social">
+		<div class="soc1"></div>
+		<div class="soc2"></div>
+		<div class="soc3"></div>
+	</div>
+</nav>
+<div class="main">
+	<select name="page-type" id="page-type">
+		<option value="code">Code</option>
+		<option value="example">Example</option>
+	</select>
+	<div class="code-example">
+		<h1>JavaScript code example</h1>
+      	<pre>
+			<code class="javascript">
+class IVisitor {
+  visit (obj) {};
+};
+
+class BonusBalanceVisitor extends IVisitor {
+  visit (hero) {
+    const BONUS_POINTS = 50;
+    const BONUS_INTERVAL_MS = 1000;
+    const BONUS_TIME_MS = 10000;
+
+    var bonusInterval = setInterval(function () {
+      hero.addBonusPoints(BONUS_POINTS);
+    }, BONUS_INTERVAL_MS);
+
+    setTimeout(function () {
+      clearInterval(bonusInterval);
+    }, BONUS_TIME_MS);
+  }
+};
+
+
+class IVisitable {
+  accept (visitor) {};
+};
+
+class Hero extends IVisitable {
+  constructor () {
+    super();
+
+    this.points = 0;
+    this.bonusPoints = 0;
+  };
+  accept (visitor) {
+    visitor.visit(this);
+  };
+  addPoints (points) {
+    this.points += points;
+  };
+  addBonusPoints (points) {
+    this.bonusPoints += points;
+  };
+};
+
+class Slark extends Hero {
+  constructor () {
+    super();
+
+    this.heroProperties = {
+      strength: 20,
+      agility: 5,
+      intelligence: 10
+    };
+  }
+};
+
+
+var init = function () {
+  var hero = new Slark(),
+      visitor = new BonusBalanceVisitor();
+
+  const PONTS_PER_SEC = 30;
+
+  setInterval(function () {
+    hero.addPoints(PONTS_PER_SEC);
+  }, 1000);
+
+  setTimeout(function () {
+    hero.accept(visitor);
+  }, 4000);
+};
+			</code>
+		</pre>
+	</div>
+	<div class="game-example">
+		<h1>Visitor example</h1>
+		<div class="content">
+			<div class="hero-image"></div>
+			<h2>Hero: Slark</h2>
+			<div class="container">
+				<div class="info">Bonus time status:</div>
+				<div class="bonus-time"></div>
+			</div>
+			<div class="container">
+				<div class="info">Points:</div>
+				<div>
+					<span class="points"></span><span class="extra-points"></span>
+				</div>
+				<button id="initialize">Start</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/tomorrow.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script src="js/main-compiled.js"></script>
+</body>
+</html>

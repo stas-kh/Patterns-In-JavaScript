@@ -1,0 +1,168 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+*, button, select {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.bird {
+	width: 130px;
+	height: 130px;
+	position: relative;
+	background-image: url("../img/birds.png");
+	float: left;
+	box-sizing: border-box;
+	border: 2px solid transparent;
+	transition: 0.5s all ease-out;
+	margin: 10px;
+	cursor: crosshair;
+}
+
+.bird-chuck {
+	background-position: 130px 130px;
+}
+.bird-red-with-bonus {
+	background-position: 260px 130px;
+}
+.bird-blues {
+	background-position: 130px 0;
+}
+
+.bird > h1 {
+	font-family: Calibri;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: 0.3s ease-out;
+	text-align: center;
+	font-size: 20px;
+	color: black;
+}
+.bird:hover {
+	border: 2px solid silver;
+	border-radius: 10px;
+	-webkit-filter: grayscale(100%);
+}
+.bird:hover > h1 {
+	display: inline-block;
+	opacity: 1;
+	bottom: 50%;
+	transform: translate(0, 50%);
+	color: white;
+	text-shadow: 0 0 1px red, 0 0 1px red, 0 0 1px red, 0 0 1px red;
+}
+
+.items-container {
+	margin: 20px 10px;
+}
+
+.player-balance {
+	position: relative;
+}
+.player-balance::after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-image: url("../img/coin.png");
+	background-size: 100%;
+	position: absolute;
+	right: -30px;
+	top: 2.5px;
+}
+
+.left-section {
+	position: fixed;
+	float: left;
+	width: 350px;
+	min-height: 700px;
+	height: 100%;
+	background: #606c88;
+	background: -webkit-linear-gradient(#606c88 0%, #3f4c6b 100%);
+	background: -moz-linear-gradient(#606c88 0%, #3f4c6b 100%);
+	background: -o-linear-gradient(#606c88 0%, #3f4c6b 100%);
+	background: linear-gradient(#606c88 0%, #3f4c6b 100%);
+}
+
+.left-section .photo {
+	background: url("http://mobi-homepage.com/wp-content/uploads/2015/03/avatar.png");
+	background-position: center;
+	background-size: cover;
+	width: 70%;
+	padding-bottom: 70%;
+	border-radius: 50%;
+	border: 2px solid white;
+	margin: 20px auto;
+}
+
+.left-section .hgroup > * {
+	color: white;
+	font-weight: 300;
+	text-align: center;
+}
+
+.left-section .author {
+	font-size: 22px;
+}
+
+.left-section .date {
+	font-size: 12px;
+	margin: 10px 0 50px 0;
+}
+
+.left-section .title {
+	text-align: center;
+	font-size: 40px;
+}
+
+.left-section .social {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.left-section .social > div {
+	width: 85px;
+	height: 85px;
+	display: inline-block;
+	transform: scale(0.6);
+	cursor: pointer;
+	background-size: 100%;
+	transition: 0.5s ease-out;
+}
+
+.left-section .social > div:hover {
+	transform: scale(0.8);
+}
+
+.left-section .social > .soc1 {
+	background-image: url("https://www.rafbf.org/sites/all/themes/rafbf/img/icon-facebook.png");
+}
+
+.left-section .social > .soc2 {
+	background-image: url("http://harrisonmusic.co.uk/wp-content/uploads/2015/01/Youtube_icon.png");
+}
+
+.left-section .social > .soc3 {
+	background-image: url("http://startupfocus.saphana.com/wp-content/uploads/2015/12/twitter-icon.png");
+}
+
+.left-section, .main {
+	font-family: 'Lato', sans-serif;
+	overflow-y: auto;
+}
+
+.main {
+	float: right;
+	width: calc(100% - 350px);
+	min-height: 100%;
+	background-color: #F5F5F5;
+	padding: 50px;
+	position: relative;
+}
+
+

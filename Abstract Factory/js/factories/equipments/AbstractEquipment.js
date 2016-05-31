@@ -1,0 +1,4 @@
+class IAbstractEquipment {
+	getEquipment() {
+	}
+}

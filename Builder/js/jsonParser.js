@@ -1,0 +1,4 @@
+class IJSONParser {
+	parseJSON (json) {
+	}
+}

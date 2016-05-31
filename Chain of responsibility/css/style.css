@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+.container {
+	text-align: center;
+}
+.box {
+	display: inline-block;
+	position: relative;
+	width: 200px;
+	min-height: 200px;
+	background: #2e2e2e;
+	border-radius: 10px 10px 40% 40%;
+	margin: 50px 20px;
+	color: white;
+	overflow: hidden;
+}
+.box h1 {
+	background: white;
+	color: #2e2e2e;
+	text-align: center;
+	margin: 10px 0;
+	border: 1px solid #2e2e2e;
+}
+.box .box-content {
+	padding: 5px 20px 30px 20px;
+	margin: 10px 0;
+}
+.generator {
+	font-size: 40px;
+	text-align: center;
+}
+.next-digit {
+	width: 30px;
+	display: inline-block;
+}
+input[type="number"] {
+	font-size: 30px;
+	display: inline-block;
+	width: 150px;
+	text-align: center;
+	margin: 10px;
+}
+.limitations {
+	text-align: center;
+	padding-top: 40px;
+}

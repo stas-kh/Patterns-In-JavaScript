@@ -1,0 +1,9 @@
+.rocket {
+    position: relative;
+    width: 70px;
+    height: 60px;
+    left: 0;
+    background-image: url("../img/rocket.png");
+    background-size: cover;
+    transition: 10s ease-out;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["constants.js"],"names":[],"mappings":";;AAAA,IAAM,cAAc;AACnB,YAAW,WAAX;AACA,SAAQ,QAAR;CAFK","file":"constants-compiled.js","sourcesContent":["const factoryType = {\r\n\tswordsman: \"swordsman\",\r\n\twizard: \"wizard\"\r\n};"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["AbstractSkill.js"],"names":[],"mappings":";;;;;;IAAM;;;;;;;iCACU;;;sCAEK;;;QAHf","file":"AbstractSkill-compiled.js","sourcesContent":["class IAbstractSkill {\r\n\tgetMainSkill() {\r\n\t}\r\n\tgetSecondarySkill() {\r\n\t}\r\n}"]}
