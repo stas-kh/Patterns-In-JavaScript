@@ -1,1 +1,4 @@
-"# Patterns-in-JavaScript" 
+# Patterns-in-JavaScript
+
+## Project description
+TBD
