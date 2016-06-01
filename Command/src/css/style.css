@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+}
+
+.main-header {
+	background-color: #673AB7;
+	color: white;
+	padding: 20px;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+.container {
+	padding: 0 1rem;
+}
+
+.command, .heroes-list {
+	padding: 0.4rem;
+}
+
+.logger {
+	font-family: "Courier New";
+	display: block;
+	overflow: auto;
+	padding: 0 0.5rem;
+}
+
+.sub-header {
+	margin: 1.3rem 0 0.5rem;
+	font-size: 1.3rem;
+}

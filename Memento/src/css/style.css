@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+
+body {
+	text-align: center;
+	background: #ECEFF1;
+}
+
+h1 {
+	padding: 40px 0;
+	margin: 0 0 30px;
+	background: #00695C;
+	color: white;
+}
+
+button {
+	display: inline-block;
+	margin: 20px auto;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.tic-tac {
+	width: 265px;
+	margin: 15px auto;
+	overflow: hidden;
+}
+
+.tic-tac p.cell {
+	width: calc(33% - 5px);
+	font-size: 30px;
+	float: left;
+	padding: 1.6666%;
+	border: 2px solid #7f8c8d;
+	text-align: center;
+	cursor: pointer;
+	height: 75px;
+	margin: 2.5px;
+	border-radius: 20%;
+}
+
+.tic-tac p.cell:hover {
+	border: 2px solid #f39c12;
+	transition: 0.5s border-color ease-out;
+}
+
+p.cell.duck-icon, p.cell.crabby-icon {
+	background-image: url("../img/icons.jpg");
+}
+
+p.cell.duck-icon {
+	background-position: 140px 0;
+}
+p.cell.crabby-icon {
+	background-position: 8px 1px;
+}
+
+[type="checkbox"] {
+	cursor: pointer;
+}
+[type="checkbox"] + span {
+	display: inline-block;
+	margin-left: 10px;
+}
