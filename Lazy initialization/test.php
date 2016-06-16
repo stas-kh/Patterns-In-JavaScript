@@ -1,0 +1,1 @@
+<?php echo 'Your feedback has been successfully added to our database'; ?>
