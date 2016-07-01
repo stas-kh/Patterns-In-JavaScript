@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Interpreter pattern</title>
+	<link rel="stylesheet" href="src/css/style.css" />
+</head>
+<body>
+
+<h1>Interpreter pattern</h1>
+<div class="content">
+	<textarea class="source" cols="60" rows="15">public function getBalance() {
+
+	double a = 12;
+	double b = 54.32;
+	int c = 23;
+	Console.WriteLine(a + b + c);
+
+	string f = "some line";
+	string l = "some another";
+	Console.WriteLine(f + " " + l);
+
+}
+
+getBalance()
+	</textarea>
+	<div>
+		<button class="transpile">Transpile</button>
+	</div>
+</div>
+
+
+<script src="build/interpreter-min.js"></script>
+</body>
+</html>
