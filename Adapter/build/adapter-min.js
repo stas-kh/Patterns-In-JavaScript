@@ -48,16 +48,13 @@
 	
 	var _itemsStore = __webpack_require__(1);
 	
-	var _rucksackAdapter = __webpack_require__(2);
+	var _rucksackAdapter = __webpack_require__(3);
 	
-	var _hero = __webpack_require__(5);
+	var _hero = __webpack_require__(6);
 	
 	window.addEventListener("load", function () {
 		/* HERO WITH ADAPTER */
-		var itemStore = new _itemsStore.ItemsStore();
-		itemStore.adapter = new _rucksackAdapter.RucksackAdapter();
-	
-		var hero = new _hero.Hero(itemStore);
+		var hero = new _hero.Hero(new _rucksackAdapter.RucksackAdapter());
 	
 		hero.items.addItem("Antidote");
 		hero.items.addItem("SP Potion");
@@ -76,6 +73,68 @@
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.ItemsStore = undefined;
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _IItemsStore2 = __webpack_require__(2);
+	
+	var _IItemsStore3 = _interopRequireDefault(_IItemsStore2);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ItemsStore = exports.ItemsStore = function (_IItemsStore) {
+		_inherits(ItemsStore, _IItemsStore);
+	
+		function ItemsStore() {
+			_classCallCheck(this, ItemsStore);
+	
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ItemsStore).call(this));
+	
+			_this._items = [];
+			return _this;
+		}
+	
+		_createClass(ItemsStore, [{
+			key: "addItem",
+			value: function addItem(item) {
+				this._items.push(item);
+				console.log(item + " is added to default items store");
+	
+				return this.getItems();
+			}
+		}, {
+			key: "clear",
+			value: function clear() {
+				this._items.length = 0;
+	
+				return this._items;
+			}
+		}, {
+			key: "getItems",
+			value: function getItems() {
+				return this._items;
+			}
+		}]);
+
+		return ItemsStore;
+	}(_IItemsStore3.default);
+
+/***/ },
+/* 2 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -88,48 +147,29 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var ItemsStore = exports.ItemsStore = function () {
-		function ItemsStore() {
-			_classCallCheck(this, ItemsStore);
-	
-			this._items = [];
-			this._itemsAdapter = null;
+	var IItemsStore = function () {
+		function IItemsStore() {
+			_classCallCheck(this, IItemsStore);
 		}
 	
-		_createClass(ItemsStore, [{
+		_createClass(IItemsStore, [{
 			key: "addItem",
-			value: function addItem(item) {
-				var result = null;
-				if (this._itemsAdapter === null) {
-					this._items.push(item);
-					console.log(item + " is added to default rucksack");
-					result = this._items;
-				} else {
-					result = this._itemsAdapter.addItem(item);
-				}
-				return result;
-			}
+			value: function addItem(item) {}
 		}, {
 			key: "getItems",
-			value: function getItems() {
-				var result = this._items;
-				if (this._itemsAdapter !== null) {
-					result = this._itemsAdapter.rucksack;
-				}
-				return result;
-			}
+			value: function getItems() {}
 		}, {
-			key: "adapter",
-			set: function set(adapter) {
-				this._itemsAdapter = adapter;
-			}
+			key: "clear",
+			value: function clear() {}
 		}]);
-
-		return ItemsStore;
+	
+		return IItemsStore;
 	}();
+	
+	exports.default = IItemsStore;
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -141,18 +181,33 @@
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _rucksack = __webpack_require__(3);
+	var _rucksack = __webpack_require__(4);
 	
-	var _password = __webpack_require__(4);
+	var _password = __webpack_require__(5);
+	
+	var _IItemsStore2 = __webpack_require__(2);
+	
+	var _IItemsStore3 = _interopRequireDefault(_IItemsStore2);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var RucksackAdapter = exports.RucksackAdapter = function () {
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var RucksackAdapter = exports.RucksackAdapter = function (_IItemsStore) {
+		_inherits(RucksackAdapter, _IItemsStore);
+	
 		function RucksackAdapter() {
 			_classCallCheck(this, RucksackAdapter);
 	
-			this._pswd = new _password.Password("23e-ur-31-p");
-			this._rucksack = null;
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(RucksackAdapter).call(this));
+	
+			_this._pswd = new _password.Password("23e-ur-31-p");
+			_this._rucksack = null;
+			return _this;
 		}
 	
 		_createClass(RucksackAdapter, [{
@@ -169,17 +224,22 @@
 				return this.initRucksack().addToInventory(item, this._pswd.password);
 			}
 		}, {
-			key: "rucksack",
-			get: function get() {
+			key: "getItems",
+			value: function getItems() {
 				return this._rucksack.inventory;
+			}
+		}, {
+			key: "clean",
+			value: function clean() {
+				return this._rucksack.removeAllItemsFromInventory();
 			}
 		}]);
 
 		return RucksackAdapter;
-	}();
+	}(_IItemsStore3.default);
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -220,6 +280,11 @@
 				return this._inventory;
 			}
 		}, {
+			key: "removeAllItemsFromInventory",
+			value: function removeAllItemsFromInventory() {
+				this._inventory = [];
+			}
+		}, {
 			key: "inventory",
 			get: function get() {
 				return this._inventory;
@@ -230,7 +295,7 @@
 	}();
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -261,7 +326,7 @@
 	}();
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";

@@ -4,10 +4,7 @@ import {Hero} from "./components/hero";
 
 window.addEventListener("load", () => {
 	/* HERO WITH ADAPTER */
-	let itemStore = new ItemsStore();
-	itemStore.adapter = new RucksackAdapter();
-
-	let hero = new Hero(itemStore);
+	let hero = new Hero(new RucksackAdapter());
 
 	hero.items.addItem("Antidote");
 	hero.items.addItem("SP Potion");

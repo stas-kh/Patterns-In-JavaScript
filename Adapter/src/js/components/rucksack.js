@@ -21,6 +21,10 @@ export class Rucksack {
 		return this._inventory;
 	}
 
+	removeAllItemsFromInventory() {
+		this._inventory = [];
+	}
+
 	get inventory() {
 		return this._inventory;
 	}

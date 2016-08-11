@@ -6,9 +6,38 @@
 	<link rel="stylesheet" href="src/css/styles.css" />
 </head>
 <body>
-	<div></div>
+	<header></header>
 	<h1>Adapter pattern</h1>
 	<h2>Made by StasKh</h2>
+
+	<div class="container">
+		<section class="content">
+			<img src="src/img/secure-rucksack.jpg"/>
+			<pre>
+			<code>
+				class Rucksack {
+					hasEmptyCell() {};
+					addToInventory(item, password) {};
+					removeAllItemsFromInventory() {};
+					get inventory() {};
+				}
+			</code>
+		</pre>
+		</section>
+
+		<section class="content">
+			<img src="src/img/default-rucksack.jpg"/>
+			<pre>
+			<code>
+				class ItemsStore {
+					addItem(item) {};
+					clear() {};
+					getItems() {};
+				}
+			</code>
+		</pre>
+		</section>
+	</div>
 
 <script src="build/adapter-min.js"></script>
 </body>

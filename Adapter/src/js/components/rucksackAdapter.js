@@ -1,8 +1,11 @@
 import {Rucksack} from "./rucksack";
 import {Password} from "./password";
+import IItemsStore from "./IItemsStore";
 
-export class RucksackAdapter {
+export class RucksackAdapter extends IItemsStore {
 	constructor() {
+		super();
+
 		this._pswd = new Password("23e-ur-31-p");
 		this._rucksack = null;
 	}
@@ -18,7 +21,11 @@ export class RucksackAdapter {
 		return this.initRucksack().addToInventory(item, this._pswd.password);
 	}
 
-	get rucksack() {
+	getItems() {
 		return this._rucksack.inventory;
+	}
+
+	clean() {
+		return this._rucksack.removeAllItemsFromInventory();
 	}
 }
